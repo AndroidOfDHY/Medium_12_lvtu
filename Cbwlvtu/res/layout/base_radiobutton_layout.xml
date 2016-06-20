@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:background="#ffffff"
+         android:orientation="vertical" >
+
+         <FrameLayout
+             android:id="@android:id/tabcontent"
+             android:layout_width="fill_parent"
+             android:layout_height="400dp"
+             android:layout_above="@id/rgMainBottomNav"
+             android:layout_weight="0.65" />
+
+         <TabWidget
+             android:id="@android:id/tabs"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.0"
+             android:visibility="gone" />
+
+         <FrameLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content" >
+
+             <RadioGroup
+                 android:id="@id/rgMainBottomNav"
+                 android:layout_width="fill_parent"
+                 android:layout_height="66dp"
+                 android:layout_alignParentBottom="true"
+                 android:orientation="horizontal" >
+
+                 <RadioButton
+                     android:id="@id/rbRecodeModuleMain"
+                     style="@style/BottomNavBarOfMain"
+                     android:background="@drawable/six_main_nav_btn_sel"
+                     android:drawableTop="@drawable/six_main_record"
+                     android:paddingTop="10.0dip"
+                     android:text="记录" />
+
+                 <RadioButton
+                     android:id="@id/rbTeamModuleMain"
+                     style="@style/BottomNavBarOfMain"
+                     android:background="@drawable/six_main_nav_btn_sel"
+                     android:drawableTop="@drawable/six_main_team"
+                     android:paddingTop="10.0dip"
+                     android:text="导航" />
+
+                 <RadioButton
+                     android:id="@id/rbFindModuleMain"
+                     style="@style/BottomNavBarOfMain"
+                     android:background="@drawable/six_main_nav_btn_sel"
+                     android:drawableTop="@drawable/six_main_find"
+                     android:paddingTop="10.0dip"
+                     android:text="发现" />
+
+                 <RadioButton
+                     android:id="@id/rbMineModuleMain"
+                     style="@style/BottomNavBarOfMain"
+                     android:background="@drawable/six_main_nav_btn_sel"
+                     android:drawableTop="@drawable/six_main_mine"
+                     android:paddingTop="10.0dip"
+                     android:text="我的" />
+             </RadioGroup>
+         </FrameLayout>
+     </LinearLayout>
+
+</TabHost>

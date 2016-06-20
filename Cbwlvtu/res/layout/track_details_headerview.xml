@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_l_r"
+    android:layout_marginRight="@dimen/margin_l_r" >
+
+        <RelativeLayout
+        android:id="@+id/layoutFindSearchActionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btnBackInFindSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/sp16"
+            android:background="@null"
+            android:drawableLeft="@drawable/six_public_btn_back"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="轨迹详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+
+        <Button
+            android:id="@+id/btnSearchInFindSearch"
+            android:layout_width="40.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/sp16"
+            android:background="@null"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/containerForMapviewTrackDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" >
+
+        <FrameLayout
+            android:id="@+id/containerMapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutOptions"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_below="@id/containerForMapviewTrackDetail"
+        android:layout_marginTop="@dimen/dp20"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnEditTrack"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/track_detail_edit_btn_9"
+            android:drawableLeft="@drawable/six_track_detail_edit_track"
+            android:gravity="center"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:text="编辑"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnUploadTrack"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_track_detail_upload_btn"
+            android:drawableLeft="@drawable/six_track_detail_upload"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:text="上传"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/track_detail_sequel_btn_9"
+            android:drawableLeft="@drawable/six_track_detail_sequel"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:text="续记"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutTrackTitleAndType"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp66"
+        android:layout_below="@id/layoutOptions"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/six_public_item_bg_top_9" >
+
+        <TextView
+            android:id="@+id/tvTrackTypeTrackDetail"
+            android:layout_width="@dimen/dp73"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="-10.0dip"
+            android:gravity="center"
+            android:paddingTop="5.0dip"
+            android:text="旅游"
+            android:textSize="@dimen/sp20" />
+
+        <TextView
+            android:id="@+id/tvTitleOfTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/tvTrackTypeTrackDetail"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="信息大楼"
+            android:textSize="@dimen/sp20" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/tvTitleOfTrack"
+            android:background="@color/six_recording_vertical_divider" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutShowDataTrackDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTrackTitleAndType"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/TrackDetailDataShowing"
+            android:background="@drawable/six_public_item_bg_mid_9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                style="@style/TrackDetail"
+                android:layout_marginTop="0dp" >
+
+                <TextView
+                    android:id="@+id/tvStartPointIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_public_start_point"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="起点" />
+
+                <TextView
+                    android:id="@+id/tvStopPointDataTrackDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tvStartPointIconTrackDetail"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="暂无"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <RelativeLayout
+                style="@style/TrackDetail"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp66"
+                android:layout_marginTop="0dp"
+                android:layout_toLeftOf="@id/tvStartPointIconTrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvStopPointIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    
+                    android:drawableTop="@drawable/six_public_end_point"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="终点"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvStopPointDataTrackDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tvStopPointIconTrackDetail"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="暂无"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/TrackDetailDataShowing"
+            android:background="@drawable/six_public_item_bg_mid_9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvDurationIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_duration"
+                    android:text="历时"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvDurationDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvDurationIconTrackDetail"
+                    android:text="00:00:00" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvDistanceIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_distance"
+                    android:text="距离"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvDistanceDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvDistanceIconTrackDetail"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tvDistanceDataUnitTrackDetail"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvDistanceDataTrackDetail"
+                    android:text="KM" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/TrackDetailDataShowing"
+            android:background="@drawable/six_public_item_bg_mid_9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvGoUpIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_go_up"
+                    android:text="上升"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvGoUpDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvGoUpIconTrackDetail"
+                    android:text="暂无" />
+
+                <TextView
+                    android:id="@+id/tvGoUpUnit"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvGoUpDataTrackDetail"
+                    android:text="M" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvGoDownIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_go_down"
+                    android:text="下降"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvGoDownDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvGoDownIconTrackDetail"
+                    android:text="暂无" />
+
+                <TextView
+                    android:id="@+id/tvGoDownIconUnitTrackDetail"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvGoDownDataTrackDetail"
+                    android:text="M" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/TrackDetailDataShowing"
+            android:background="@drawable/six_public_item_bg_mid_9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvMinAltIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_public_min_alt"
+                    android:text="最低海拔"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvMinAltDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvMinAltIconTrackDetail"
+                    android:text="暂无" />
+
+                <TextView
+                    android:id="@+id/tvMinAltUnit"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvMinAltDataTrackDetail"
+                    android:text="M" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvMaxAltIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    
+                    android:text="最高海拔"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvMaxAltDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvMaxAltIconTrackDetail"
+                    android:text="暂无" />
+
+                <TextView
+                    android:id="@+id/tvMaxAltIconUnitTrackDetail"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvMaxAltDataTrackDetail"
+                    android:text="M" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/TrackDetailDataShowing"
+            android:background="@drawable/six_public_item_bg_mid_9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvSpeedIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_speed"
+                    android:text="最大速度"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvSpeedDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvSpeedIconTrackDetail"
+                    android:text="暂无" />
+
+                <TextView
+                    android:id="@+id/tvSpeedUnitTrackDetail"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvSpeedDataTrackDetail"
+                    android:text="KM/H" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvAeragedSpeedIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_average_speed"
+                    android:text="平均速度"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvAeragedSpeedDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvAeragedSpeedIconTrackDetail"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tvAeragedSpeedUnitTrackDetail"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvAeragedSpeedDataTrackDetail"
+                    android:text="KM/H" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/TrackDetailDataShowing"
+            android:background="@drawable/six_public_item_bg_bottom_9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvKmPerHourIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_public_km_per_hour"
+                    android:text="配速"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvKmPerHourDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvKmPerHourIconTrackDetail"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tvKmPerHourUnitTrackDetail"
+                    style="@style/FontStyleUnitLcd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.0dip"
+                    android:layout_toRightOf="@id/tvKmPerHourDataTrackDetail"
+                    android:text="MIN" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <RelativeLayout style="@style/TrackDetail" >
+
+                <TextView
+                    android:id="@+id/tvDepartureIconTrackDetail"
+                    style="@style/TrackDetailDataInfoIcon"
+                    android:drawableTop="@drawable/six_data_start_time"
+                    android:text="出发时间"
+                    android:textColor="@color/small_blue_text"
+                    android:textSize="9.0dip" />
+
+                <TextView
+                    android:id="@+id/tvDepartureDataTrackDetail"
+                    style="@style/TrackDetailDataInfoLCDFont"
+                    android:layout_toRightOf="@id/tvDepartureIconTrackDetail"
+                    android:text="00:00" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutDescriptionTrackDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutShowDataTrackDetail"
+        android:layout_marginTop="@dimen/dp48"
+        android:background="@drawable/six_public_item_bg_9"
+        android:paddingBottom="20.0dip" >
+
+        <TextView
+            android:id="@+id/tvTrackAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginTop="6.0dip"
+            android:text="来自：小飞侠"
+            android:textColor="@color/from_name_text"
+            android:textSize="@dimen/sp10" />
+
+        <TextView
+            android:id="@+id/tvTrackBrowseTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginTop="6.0dip"
+            android:text="浏览1123次"
+            android:textColor="@color/from_name_text"
+            android:textSize="@dimen/sp10" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@id/tvTrackBrowseTimes"
+            android:background="@color/six_recording_vertical_divider" />
+
+        <TextView
+            android:id="@+id/tvDescOfTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTrackAuthor"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="描述"
+            android:textColor="@color/from_name_text"
+            android:textSize="17.0dip" />
+
+        <TextView
+            android:id="@+id/tvDescOfTrackDetail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDescOfTrack"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/white"
+            android:textSize="66dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutContainerCharview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutDescriptionTrackDetail"
+        android:layout_marginTop="@dimen/dp48"
+        android:background="@drawable/six_public_item_bg_9"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tvCountFootprintsTrackDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp57"
+        android:layout_below="@id/layoutContainerCharview"
+        android:layout_marginTop="@dimen/dp48"
+        android:background="@drawable/six_public_item_bg_bottom2_9"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:text="0个脚印"
+        android:textColor="@color/from_name_text"
+        android:textSize="5dp" />
+
+</RelativeLayout>

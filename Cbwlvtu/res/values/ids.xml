@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="main_layout" type="id"/>
+    <item name="titlebar_layout" type="id"/>
+    <item name="containerMain" type="id"/>
+    <item name="rgMainBottomNav" type="id"/>
+    <item name="rbTeamModuleMain" type="id"/>
+    <item name="rbFindModuleMain" type="id"/>
+    <item name="rbRecodeModuleMain" type="id"/>
+    <item name="rbMineModuleMain" type="id"/>
+    <item name="category_layout" type="id"/>
+    <item name="titlebar_title" type="id"/>
+    <item name="my_journey" type="id"/>
+    <item name="my_collect" type="id"/>
+    <item name="find_nearby_btn" type="id"/>
+    <item name="find_main_frame" type="id"/>
+    <item name="find_select_btn" type="id"/>
+    <item name="find_main_new_btn" type="id"/>
+    <item name="layoutType" type="id"></item>
+    <item name="tvTrackType" type="id"></item>
+    <item name="btnTrackTypeChoose" type="id"></item>
+    <item name="layoutDifficulty" type="id"></item>
+    <item name="tvTrackDifficulty" type="id"></item>
+    <item name="btnTrackDifficultyChoose" type="id"></item>
+    <item name="etDescOfTrack" type="id"></item>
+    <item name="tvFootprintsCount" type="id"></item>    
+    <item name="etTitleOfTrackSaveTrack" type="id"></item>
+</resources>

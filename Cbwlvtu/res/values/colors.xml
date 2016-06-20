@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <item type="drawable" name="main_background">#ffe7e7e7</item>
+    <item type="color" name="white">#ffffffff</item>
+    <item type="color" name="black">#00000000</item>
+    <item type="color" name="small_blue_text">#87CEEB</item>
+    <item type="color" name="public_title_bg_color">#ff163680</item>
+    <item type="color" name="gps_status_bar">#00000000</item>
+    <item type="color" name="titlebar_font_color">#ffffffff</item>
+    <item type="color" name="six_recording_vertical_divider">#ffffffff</item>
+    <item type="color" name="from_name_text">#ffffffff</item>
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/six_public_bg" >
+
+    <RelativeLayout
+        android:id="@id/titlebar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/public_title_bg_color" >
+
+        <TextView
+            android:id="@id/titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="到这去"
+            android:textSize="25.0sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@id/etTitleOfTrackSaveTrack"
+        android:layout_width="fill_parent"
+        android:layout_height="66.0dip"
+        android:layout_below="@id/titlebar_layout"
+        android:background="@drawable/six_public_item_bg_top_9"
+        android:gravity="left"
+        android:hint="标题"
+        android:lines="2"
+        android:minLines="2"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="20.0dip"
+        android:textColor="@color/white"
+        android:textSize="25.0sp" >
+    </EditText>
+
+    <RelativeLayout
+        android:id="@id/layoutType"
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:layout_below="@id/etTitleOfTrackSaveTrack"
+        android:background="@drawable/six_public_item_bg_mid_9"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+
+        <TextView
+            android:id="@id/tvTrackType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="获取当前位置"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/btnTrackTypeChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/marker_start"
+            android:drawablePadding="10.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/layoutDifficulty"
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:layout_below="@id/layoutType"
+        android:background="@drawable/six_public_item_bg_mid_9"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+
+        <TextView
+            android:id="@id/tvTrackDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="获取目标地点位置"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/btnTrackDifficultyChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/marker_stop"
+            android:button="@null"
+            android:drawablePadding="10.0dip" />
+    </RelativeLayout>
+
+    
+
+    <Button
+        android:id="@+id/btnStartChoose"
+        style="@style/Mine_layout_botton"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layoutDifficulty"
+        android:layout_marginTop="100dp"
+        android:text="开始导航" />
+
+</RelativeLayout>

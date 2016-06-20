@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100.0dip"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <ImageView
+            android:id="@+id/ivThumbnailItemAround"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/demo_sel" />
+
+        <TextView
+            android:id="@+id/tvDistanceItemAround"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10.0dip"
+            android:drawableLeft="@drawable/six_map_my_location_normal"
+            android:gravity="center"
+            android:text="离我100米"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.0"
+        android:background="@drawable/demo_sel"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/tvTitleItemAround"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/six_choiceness_type_foot"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:text="5月30日【大红鹰一日游】"
+                android:textColor="@color/white"
+                android:textSize="17.0sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvAuthorItemAround"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/six_add_guideline_author"
+                    android:gravity="center"
+                    android:text="未上传"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvTotalTimeItemAround"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/six_add_guideline_duration"
+                    android:gravity="center"
+                    android:text="02:20:34"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvTotalDistanceItemAround"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/six_add_guideline_distance"
+                    android:gravity="center"
+                    android:text="23km"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStartTimeItemAround"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/six_data_start_time"
+                    android:gravity="center"
+                    android:text="23:12:05"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

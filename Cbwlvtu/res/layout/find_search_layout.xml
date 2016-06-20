@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layoutFindSearchActionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btnBackInFindSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/sp16"
+            android:background="@null"
+            android:drawableLeft="@drawable/six_public_btn_back"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="设置搜索条件"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+
+        <Button
+            android:id="@+id/btnSearchInFindSearch"
+            android:layout_width="40.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/sp16"
+            android:background="@null"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutFindSearchActionbar"
+        android:background="@drawable/six_public_bg" >
+
+        <EditText
+            android:id="@+id/etKeywordFindSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="57.0dip"
+            android:layout_marginBottom="@dimen/dp33"
+            android:layout_marginTop="@dimen/dp33"
+            android:background="@drawable/six_public_item_bg_9"
+            android:hint="请输入关键字"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layoutTrackOptions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etKeywordFindSearch"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layoutTrackType"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/six_public_item_bg_9"
+                android:gravity="center_vertical"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip" >
+
+                <TextView
+                    android:id="@+id/tvTrackTypeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/find_search_type"
+                    android:textColor="@color/white"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:id="@+id/tvTrackTypeFindSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvTrackTypeTitle"
+
+                    android:textColor="@color/white"
+                    android:textSize="17.0sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerTypeFindSearch"
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip"
+                    android:entries="@array/search_items_track_activity_labels"
+                    android:prompt="@string/find_search_type"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivTrackTypeFindSearch"
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_alignBottom="@id/tvTrackTypeTitle"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutAreaFindSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/six_public_item_bg_9"
+                android:gravity="center_vertical"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip" >
+
+                <TextView
+                    android:id="@+id/tvRegionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/find_search_region"
+                    android:textColor="@color/white"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:id="@+id/tvRegionFindSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvRegionTitle"
+                    
+                    android:textColor="@color/white"
+                    android:textSize="17.0sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerRegionFindSearch"
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip"
+                    android:entries="@array/search_items_track_region"
+                    android:prompt="@string/find_search_region"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivRegionFindSearch"
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_alignBottom="@id/tvRegionTitle"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutDistanceFindSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/six_public_item_bg_9"
+                android:gravity="center_vertical"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip" >
+
+                <TextView
+                    android:id="@+id/tvDistanceFromMeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离当前位置"
+                    android:textColor="@color/white"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:id="@+id/tvDistanceFromMeFindSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvDistanceFromMeTitle"
+                    android:textColor="@color/white"
+                    android:textSize="17.0sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerDistanceFindSearch"
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip"
+                    android:entries="@array/search_items_track_distance"
+                    android:prompt="@string/find_search_region"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivDistanceFromMeFindSearch"
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_alignBottom="@id/tvDistanceFromMeTitle"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutRecommendFindSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/six_public_item_bg_9"
+                android:gravity="center_vertical"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="只搜索推荐行程"
+                    android:textColor="@color/white"
+                    android:textSize="20.0dip" />
+
+                <ToggleButton
+                    android:id="@+id/btnTypeFindSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toggle_selector"
+                    android:gravity="center_vertical"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

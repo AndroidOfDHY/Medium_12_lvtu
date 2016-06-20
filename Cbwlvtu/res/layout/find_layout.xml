@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/six_public_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_gravity="center_vertical"
+        android:background="@color/public_title_bg_color" >
+
+        <RelativeLayout
+            android:layout_width="220.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/six_public_title_button_bg" >
+
+            <RadioGroup
+                android:id="@+id/rgTrackDataRecording"
+                android:layout_width="wrap_content"
+                android:layout_height="40.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0.0dip"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/btnDataRedording"
+                    android:layout_width="106dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/six_public_title_button_left_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="精选"
+                    android:textColor="@color/white"
+                    android:textSize="20.0sp" />
+
+                <RadioButton
+                    android:id="@+id/btnTrackRecrding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/six_public_title_button_right_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="附近"
+                    android:textColor="@color/white"
+                    android:textSize="20.0sp" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/find_main_new_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/find_title_new_text"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        
+        <Button
+            android:id="@+id/btnSearchInFindSearch"
+            android:layout_width="40.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/sp16"
+            android:background="@null"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/find_main_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" />
+
+</RelativeLayout>

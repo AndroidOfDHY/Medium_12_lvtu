@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="margin_l_r">5dp</item>
+    <item type="dimen" name="dp66">66dp</item>
+    <item type="dimen" name="dp20">20dp</item>
+    <item type="dimen" name="dp73">73dp</item>
+    <item type="dimen" name="sp20">20sp</item>
+    <item type="dimen" name="dp48">48dp</item>
+    <item type="dimen" name="sp10">10sp</item>
+    <item type="dimen" name="dp57">57dp</item>
+    <item type="dimen" name="dp170">170dp</item>
+    <item type="dimen" name="dp33">33dp</item>
+    <item type="dimen" name="sp16">16sp</item>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:id="@id/containerMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/rgMainBottomNav" />
+
+     <Button
+        android:id="@+id/Cancel_track"
+        style="@style/Mine_layout_botton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="取消" />
+     
+    <Button
+        android:id="@+id/Give_up_track"
+        style="@style/Mine_layout_botton"
+        android:layout_above="@+id/Cancel_track"
+        android:layout_alignParentLeft="true"
+        android:text="放弃路线" />
+
+    <Button
+        android:id="@+id/Sace_track"
+        style="@style/Mine_layout_botton"
+        android:layout_above="@+id/Give_up_track"
+        android:layout_alignParentLeft="true"
+        
+        android:text="保存路线" />
+
+</RelativeLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/six_public_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/containerRecodeMapMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layoutStatusBarRecord"
+        android:layout_width="fill_parent"
+        android:layout_height="141dp"
+        android:background="@drawable/six_record_titlebar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/gpsAndWeather"
+            android:layout_width="fill_parent"
+            android:layout_height="26dp"
+            android:layout_marginLeft="@dimen/margin_l_r"
+            android:layout_marginRight="@dimen/margin_l_r"
+            android:background="@drawable/six_public_item_bg_9" >
+
+            <TextView
+                android:id="@+id/tvGpsStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="GPS"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:layout_toLeftOf="@id/tvTemperature"
+                android:textColor="@color/gps_status_bar" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTopNavMain"
+            android:layout_width="fill_parent"
+            android:layout_height="53dp"
+            android:layout_below="@id/gpsAndWeather"
+            android:layout_marginLeft="@dimen/margin_l_r"
+            android:layout_marginRight="@dimen/margin_l_r"
+            android:background="@drawable/six_public_item_bg_9"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/six_record_duration"
+                android:gravity="center_vertical"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textScaleX="0.65"
+                android:textSize="33.0sp" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/six_record_distance"
+                android:gravity="right|center"
+                android:text="0m"
+                android:textColor="@color/white"
+                android:textScaleX="0.65"
+                android:textSize="33.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutActionViewMain"
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_below="@id/layoutTopNavMain"
+            android:layout_marginLeft="@dimen/margin_l_r"
+            android:layout_marginRight="@dimen/margin_l_r"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/six_public_item_bg_9"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnNearRouteMain"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/six_record_options_btn_selector"
+                android:text="@string/around_route"
+                android:textColor="@color/titlebar_font_color" />
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <Button
+                android:id="@+id/btnReferRouteMain"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/six_record_options_btn_selector"
+                android:text="@string/refer_route"
+                android:textColor="@color/titlebar_font_color" />
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <Button
+                android:id="@+id/btnTeammatePositionMain"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/six_record_options_btn_selector"
+                android:text="详细数据"
+                android:textColor="@color/titlebar_font_color" />
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:background="@color/six_recording_vertical_divider" />
+
+            <Button
+                android:id="@+id/btnAddFootPrintMain"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/six_record_options_btn_selector"
+                android:text="@string/add_footprint"
+                android:textColor="@color/titlebar_font_color" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnShowTrackInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutStatusBarRecord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-2.0dip"
+        android:background="@drawable/six_record_pull_up" />
+
+    <RelativeLayout
+        android:id="@+id/layoutStartPauseStop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp" >
+
+        <View
+            android:id="@+id/viewCenterHorizontal"
+            android:layout_width="1.0dip"
+            android:layout_height="5.0dip"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnStartRecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/start_navigation" />
+
+        <Button
+            android:id="@+id/btnPauseRecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/viewCenterHorizontal"
+            android:background="@drawable/selector_track_pause"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btnGoonRecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true" 
+            android:layout_toLeftOf="@id/viewCenterHorizontal"
+            android:background="@drawable/selector_track_goon"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btnStopRecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewCenterHorizontal"
+            android:background="@drawable/selector_track_stop"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnToCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="33dp"
+        android:layout_marginLeft="10.0dip"
+        android:background="@drawable/six_map_my_location_normal" />
+
+    <Button
+        android:id="@+id/btnSettingMapAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="148dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_track_set" />
+    
+
+
+</RelativeLayout>
